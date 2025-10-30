@@ -1,0 +1,136 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #0f172a, #1e293b);
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  width: 360px;
+  background: #111827;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #6ee7b7;
+  margin-bottom: 1rem;
+}
+
+/* DISPLAY */
+.display-advanced {
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6),
+              0 0 12px rgba(110, 231, 183, 0.2);
+  overflow: hidden;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.display-expression {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.display-expression::-webkit-scrollbar {
+  display: none;
+}
+
+.display-result {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #6ee7b7;
+  text-align: right;
+  opacity: 0.7;
+  transform: translateY(5px);
+  transition: all 0.25s ease;
+}
+
+.display-result.show-result {
+  opacity: 1;
+  transform: translateY(0);
+  text-shadow: 0 0 8px rgba(110, 231, 183, 0.4);
+}
+
+/* KEYPAD */
+.keypad-advanced {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  background: #1f2937;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.key:hover {
+  background: #6ee7b7;
+  color: #0f172a;
+  transform: scale(1.05);
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.key-eq {
+  background: #6ee7b7;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.key-clear {
+  background: #ef4444;
+  color: #fff;
+}
+
+.key-clear:hover {
+  background: #f87171;
+}
+
+.key-del {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.key-del:hover {
+  background: #fbbf24;
+}
+
+.key-sci {
+  background: #334155;
+}
+
+.key-sci:hover {
+  background: #64748b;
+}
+
+.key-ops {
+  background: #475569;
+}
+
+.key-ops:hover {
+  background: #6b7280;
+}
